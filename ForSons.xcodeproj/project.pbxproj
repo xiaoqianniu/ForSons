@@ -13,7 +13,7 @@
 		EA28C20620A1EB9800E20A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA28C20520A1EB9800E20A9C /* Assets.xcassets */; };
 		EA28C20920A1EB9800E20A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA28C20720A1EB9800E20A9C /* LaunchScreen.storyboard */; };
 		EA28C21720A1F2AF00E20A9C /* RulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */; };
-		EA28C21820A1F2AF00E20A9C /* RulesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA28C21620A1F2AF00E20A9C /* RulesTableViewCell.xib */; };
+		EA28C21820A1F2AF00E20A9C /* RulesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA28C21620A1F2AF00E20A9C /* RulesCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		EA28C20820A1EB9800E20A9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA28C20A20A1EB9800E20A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewCell.swift; sourceTree = "<group>"; };
-		EA28C21620A1F2AF00E20A9C /* RulesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesTableViewCell.xib; sourceTree = "<group>"; };
+		EA28C21620A1F2AF00E20A9C /* RulesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */,
-				EA28C21620A1F2AF00E20A9C /* RulesTableViewCell.xib */,
+				EA28C21620A1F2AF00E20A9C /* RulesCell.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA28C20920A1EB9800E20A9C /* LaunchScreen.storyboard in Resources */,
-				EA28C21820A1F2AF00E20A9C /* RulesTableViewCell.xib in Resources */,
+				EA28C21820A1F2AF00E20A9C /* RulesCell.xib in Resources */,
 				EA28C20620A1EB9800E20A9C /* Assets.xcassets in Resources */,
 				EA28C20420A1EB9800E20A9C /* Main.storyboard in Resources */,
 			);
@@ -324,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WESCS98BF;
-				INFOPLIST_FILE = ForSons/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ForSons/Supports/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoweichen.ForSons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,7 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WESCS98BF;
-				INFOPLIST_FILE = ForSons/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ForSons/Supports/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoweichen.ForSons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
