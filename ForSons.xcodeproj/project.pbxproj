@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EA28C1FF20A1EB9800E20A9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C1FE20A1EB9800E20A9C /* AppDelegate.swift */; };
-		EA28C20120A1EB9800E20A9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C20020A1EB9800E20A9C /* ViewController.swift */; };
+		EA28C20120A1EB9800E20A9C /* RulesCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C20020A1EB9800E20A9C /* RulesCheckViewController.swift */; };
 		EA28C20420A1EB9800E20A9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA28C20220A1EB9800E20A9C /* Main.storyboard */; };
 		EA28C20620A1EB9800E20A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA28C20520A1EB9800E20A9C /* Assets.xcassets */; };
 		EA28C20920A1EB9800E20A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA28C20720A1EB9800E20A9C /* LaunchScreen.storyboard */; };
+		EA28C21720A1F2AF00E20A9C /* RulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */; };
+		EA28C21820A1F2AF00E20A9C /* RulesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA28C21620A1F2AF00E20A9C /* RulesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA28C1FB20A1EB9800E20A9C /* ForSons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForSons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA28C1FE20A1EB9800E20A9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA28C20020A1EB9800E20A9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA28C20020A1EB9800E20A9C /* RulesCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesCheckViewController.swift; sourceTree = "<group>"; };
 		EA28C20320A1EB9800E20A9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA28C20520A1EB9800E20A9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA28C20820A1EB9800E20A9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA28C20A20A1EB9800E20A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewCell.swift; sourceTree = "<group>"; };
+		EA28C21620A1F2AF00E20A9C /* RulesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,56 @@
 		EA28C1FD20A1EB9800E20A9C /* ForSons */ = {
 			isa = PBXGroup;
 			children = (
-				EA28C1FE20A1EB9800E20A9C /* AppDelegate.swift */,
-				EA28C20020A1EB9800E20A9C /* ViewController.swift */,
-				EA28C20220A1EB9800E20A9C /* Main.storyboard */,
-				EA28C20520A1EB9800E20A9C /* Assets.xcassets */,
-				EA28C20720A1EB9800E20A9C /* LaunchScreen.storyboard */,
-				EA28C20A20A1EB9800E20A9C /* Info.plist */,
+				EA28C21320A1F1E900E20A9C /* Supports */,
+				EA28C21220A1F1D200E20A9C /* Controller */,
+				EA28C21120A1F1CA00E20A9C /* Model */,
+				EA28C21020A1F1BF00E20A9C /* View */,
 			);
 			path = ForSons;
+			sourceTree = "<group>";
+		};
+		EA28C21020A1F1BF00E20A9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA28C20220A1EB9800E20A9C /* Main.storyboard */,
+				EA28C20720A1EB9800E20A9C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA28C21120A1F1CA00E20A9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA28C21220A1F1D200E20A9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA28C20020A1EB9800E20A9C /* RulesCheckViewController.swift */,
+				EA28C1FE20A1EB9800E20A9C /* AppDelegate.swift */,
+				EA28C21420A1F26F00E20A9C /* Custom Cell */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EA28C21320A1F1E900E20A9C /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				EA28C20520A1EB9800E20A9C /* Assets.xcassets */,
+				EA28C20A20A1EB9800E20A9C /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		EA28C21420A1F26F00E20A9C /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */,
+				EA28C21620A1F2AF00E20A9C /* RulesTableViewCell.xib */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA28C20920A1EB9800E20A9C /* LaunchScreen.storyboard in Resources */,
+				EA28C21820A1F2AF00E20A9C /* RulesTableViewCell.xib in Resources */,
 				EA28C20620A1EB9800E20A9C /* Assets.xcassets in Resources */,
 				EA28C20420A1EB9800E20A9C /* Main.storyboard in Resources */,
 			);
@@ -136,8 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA28C20120A1EB9800E20A9C /* ViewController.swift in Sources */,
+				EA28C20120A1EB9800E20A9C /* RulesCheckViewController.swift in Sources */,
 				EA28C1FF20A1EB9800E20A9C /* AppDelegate.swift in Sources */,
+				EA28C21720A1F2AF00E20A9C /* RulesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
