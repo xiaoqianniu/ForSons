@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63AC37DABF12DF6477F6F41E /* Pods_ForSons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6085406F1BE5E92C863D8DFF /* Pods_ForSons.framework */; };
 		EA28C1FF20A1EB9800E20A9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C1FE20A1EB9800E20A9C /* AppDelegate.swift */; };
 		EA28C20120A1EB9800E20A9C /* RulesCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C20020A1EB9800E20A9C /* RulesCheckViewController.swift */; };
 		EA28C20420A1EB9800E20A9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA28C20220A1EB9800E20A9C /* Main.storyboard */; };
@@ -14,9 +15,13 @@
 		EA28C20920A1EB9800E20A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA28C20720A1EB9800E20A9C /* LaunchScreen.storyboard */; };
 		EA28C21720A1F2AF00E20A9C /* RulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */; };
 		EA28C21820A1F2AF00E20A9C /* RulesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA28C21620A1F2AF00E20A9C /* RulesCell.xib */; };
+		EA28C21A20A215B000E20A9C /* listModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C21920A215B000E20A9C /* listModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FD5697551304D9D8C9DF0E2 /* Pods-ForSons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForSons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ForSons/Pods-ForSons.debug.xcconfig"; sourceTree = "<group>"; };
+		3F6FF957A9959FD8082E7CD2 /* Pods-ForSons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForSons.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForSons/Pods-ForSons.release.xcconfig"; sourceTree = "<group>"; };
+		6085406F1BE5E92C863D8DFF /* Pods_ForSons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForSons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA28C1FB20A1EB9800E20A9C /* ForSons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForSons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA28C1FE20A1EB9800E20A9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA28C20020A1EB9800E20A9C /* RulesCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesCheckViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		EA28C20A20A1EB9800E20A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewCell.swift; sourceTree = "<group>"; };
 		EA28C21620A1F2AF00E20A9C /* RulesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesCell.xib; sourceTree = "<group>"; };
+		EA28C21920A215B000E20A9C /* listModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63AC37DABF12DF6477F6F41E /* Pods_ForSons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76B9E15F959D5F4FC02F0513 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FD5697551304D9D8C9DF0E2 /* Pods-ForSons.debug.xcconfig */,
+				3F6FF957A9959FD8082E7CD2 /* Pods-ForSons.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A5F2E362C7A35DCEDFD338EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6085406F1BE5E92C863D8DFF /* Pods_ForSons.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA28C1F220A1EB9800E20A9C = {
 			isa = PBXGroup;
 			children = (
 				EA28C1FD20A1EB9800E20A9C /* ForSons */,
 				EA28C1FC20A1EB9800E20A9C /* Products */,
+				76B9E15F959D5F4FC02F0513 /* Pods */,
+				A5F2E362C7A35DCEDFD338EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +104,7 @@
 		EA28C21120A1F1CA00E20A9C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA28C21920A215B000E20A9C /* listModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA28C20D20A1EB9800E20A9C /* Build configuration list for PBXNativeTarget "ForSons" */;
 			buildPhases = (
+				6EE45B7CD1750A16AA8AF12B /* [CP] Check Pods Manifest.lock */,
 				EA28C1F720A1EB9800E20A9C /* Sources */,
 				EA28C1F820A1EB9800E20A9C /* Frameworks */,
 				EA28C1F920A1EB9800E20A9C /* Resources */,
+				FA910F62971BB2E9A8308C9B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,6 +207,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6EE45B7CD1750A16AA8AF12B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ForSons-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA910F62971BB2E9A8308C9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ForSons/Pods-ForSons-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ForSons/Pods-ForSons-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA28C1F720A1EB9800E20A9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -186,6 +256,7 @@
 				EA28C20120A1EB9800E20A9C /* RulesCheckViewController.swift in Sources */,
 				EA28C1FF20A1EB9800E20A9C /* AppDelegate.swift in Sources */,
 				EA28C21720A1F2AF00E20A9C /* RulesTableViewCell.swift in Sources */,
+				EA28C21A20A215B000E20A9C /* listModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +391,7 @@
 		};
 		EA28C20E20A1EB9800E20A9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FD5697551304D9D8C9DF0E2 /* Pods-ForSons.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -335,6 +407,7 @@
 		};
 		EA28C20F20A1EB9800E20A9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F6FF957A9959FD8082E7CD2 /* Pods-ForSons.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
