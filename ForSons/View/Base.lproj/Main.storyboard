@@ -42,14 +42,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Be Better" id="Ay3-cm-s0A"/>
+                    <navigationItem key="navigationItem" title="Be Better" id="Ay3-cm-s0A">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kaX-zt-sTG">
+                            <connections>
+                                <action selector="addNewRules:" destination="BYZ-38-t0r" id="CiI-H3-8Hu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dtK-Rm-Hdq" id="CgQ-AZ-CGK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478" y="-206"/>
+            <point key="canvasLocation" x="441" y="-296"/>
         </scene>
         <!--FamSched-->
         <scene sceneID="lnH-x2-lza">
@@ -73,6 +79,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mDO-q6-6I9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vtz-dI-52o">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -107,7 +114,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar (1)" width="24" height="24"/>
-        <image name="list" width="24" height="24"/>
+        <image name="calendar (1)" width="12" height="12"/>
+        <image name="list" width="12" height="12"/>
     </resources>
 </document>

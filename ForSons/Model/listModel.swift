@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
-class List {
-    var name : String = ""
-    var check : Bool = false
+class List : Object {
+    @objc dynamic var name : String = ""
+    @objc dynamic var check : Bool = false
 }
 
