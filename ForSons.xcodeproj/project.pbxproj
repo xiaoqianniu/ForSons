@@ -16,6 +16,7 @@
 		EA28C21720A1F2AF00E20A9C /* RulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */; };
 		EA28C21820A1F2AF00E20A9C /* RulesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA28C21620A1F2AF00E20A9C /* RulesCell.xib */; };
 		EA28C21A20A215B000E20A9C /* listModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C21920A215B000E20A9C /* listModel.swift */; };
+		EAF1F95120A5E95D003D60E6 /* FamSchedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1F95020A5E95D003D60E6 /* FamSchedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewCell.swift; sourceTree = "<group>"; };
 		EA28C21620A1F2AF00E20A9C /* RulesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesCell.xib; sourceTree = "<group>"; };
 		EA28C21920A215B000E20A9C /* listModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listModel.swift; sourceTree = "<group>"; };
+		EAF1F95020A5E95D003D60E6 /* FamSchedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamSchedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				EA28C20020A1EB9800E20A9C /* RulesCheckViewController.swift */,
+				EAF1F95020A5E95D003D60E6 /* FamSchedViewController.swift */,
 				EA28C1FE20A1EB9800E20A9C /* AppDelegate.swift */,
 				EA28C21420A1F26F00E20A9C /* Custom Cell */,
 			);
@@ -256,6 +259,7 @@
 				EA28C20120A1EB9800E20A9C /* RulesCheckViewController.swift in Sources */,
 				EA28C1FF20A1EB9800E20A9C /* AppDelegate.swift in Sources */,
 				EA28C21720A1F2AF00E20A9C /* RulesTableViewCell.swift in Sources */,
+				EAF1F95120A5E95D003D60E6 /* FamSchedViewController.swift in Sources */,
 				EA28C21A20A215B000E20A9C /* listModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

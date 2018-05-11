@@ -23,48 +23,10 @@ class RulesCheckViewController: UIViewController,UITableViewDelegate,UITableView
         tableView.dataSource = self
         let nibName = UINib(nibName: "RulesCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "listCell")
-        
+     let newItem = List()
+        newItem.name = "1. read a book."
+        rules.append(newItem)
       
-       
-        
-        let newItem2 = List()
-        newItem2.name = "I like you"
-        newItem2.check = true
-       rules.append(newItem2)
-        
-        let newItem3 = List()
-        newItem3.name = "I hate you"
-        rules.append(newItem3)
-        
-        let newItem4 = List()
-        newItem4.name = "I like you"
-        rules.append(newItem4)
-        
-        let newItem5 = List()
-        newItem5.name = "I like you"
-        rules.append(newItem5)
-        let newItem6 = List()
-        newItem6.name = "I like you"
-        rules.append(newItem6)
-        let newItem7 = List()
-        newItem7.name = "I like you"
-       rules.append(newItem7)
-        let newItem8 = List()
-        newItem8.name = "I like you"
-        rules.append(newItem8)
-        let newItem9 = List()
-        newItem9.name = "I like you"
-        rules.append(newItem9)
-        let newItem10 = List()
-        newItem10.name = "I like you"
-        rules.append(newItem10)
-        let newItem11 = List()
-        newItem11.name = "I like you"
-        rules.append(newItem11)
-        let newItem12 = List()
-        newItem12.name = "I like you"
-       rules.append(newItem12)
-        
        
     }
 
@@ -76,11 +38,11 @@ class RulesCheckViewController: UIViewController,UITableViewDelegate,UITableView
         cell.listLbl.text = rules[indexPath.row].name
         
        
-        print(rules)
+     
         
         
      
-//        cell.checkBtn.addTarget(self, action: #selector(checkBtnPressed(sender:)), for: .touchUpInside)
+        cell.checkBtn.addTarget(self, action: #selector(checkBtnPressed(sender:)), for: .touchUpInside)
         
         if rules[indexPath.row].check == true{
             cell.checkBtn.setImage(#imageLiteral(resourceName: "check-button"), for: .normal)
@@ -89,18 +51,20 @@ class RulesCheckViewController: UIViewController,UITableViewDelegate,UITableView
         }
         return cell
     }
-//    @objc func checkBtnPressed(sender:UIButton){
-//        if sender.isSelected{
-//            sender.isSelected = false
-//
-//        }else{
-//            sender.isSelected = true
-//        }
-//    }
+    @objc func checkBtnPressed(sender:UIButton){
+        if sender.isSelected{
+            sender.isSelected = false
+        }else{
+            sender.isSelected = true
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
         return rules.count
+        
     }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90.0
@@ -108,7 +72,7 @@ class RulesCheckViewController: UIViewController,UITableViewDelegate,UITableView
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         rules[indexPath.row].check = !rules[indexPath.row].check
-        print(rules[indexPath.row].check)
+        
         let cell = tableView.cellForRow(at: indexPath) as! RulesTableViewCell
         if rules[indexPath.row].check == true{
         cell.checkBtn.setImage(#imageLiteral(resourceName: "check-button"), for: .normal)
@@ -122,11 +86,43 @@ class RulesCheckViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     @IBAction func addNewRules(_ sender: UIBarButtonItem) {
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Add New Rules", message: nil, preferredStyle: .alert)
+        let OKaction = UIAlertAction(title: "OK", style: .default) { (OKaction) in
+//when press ok button what will happen.
+            let newItem = List()
+            newItem.name = textField.text!
+            
+            self.save(rules: newItem)
+            
+            let indexPath = IndexPath(row: self.rules.count-1, section: 0)
+     
+            self.tableView.beginUpdates()
+          
+           
+            self.tableView.insertRows(at:[indexPath], with: .bottom)
+            
+            self.tableView.endUpdates()
+            
+           self.tableView.reloadData()
+            
+          
+
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addTextField { (newRule) in
+            newRule.placeholder = "Add new rules"
+            textField = newRule
+        }
+        
+        alert.addAction(OKaction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
-    func save(rulesList:List){
+    func save(rules:List){
         do{
             try realm.write {
-                realm.add(rulesList)
+                realm.add(rules)
             }
         }catch{
             print(error)
