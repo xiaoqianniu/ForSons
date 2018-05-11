@@ -17,6 +17,9 @@
 		EA28C21820A1F2AF00E20A9C /* RulesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA28C21620A1F2AF00E20A9C /* RulesCell.xib */; };
 		EA28C21A20A215B000E20A9C /* listModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C21920A215B000E20A9C /* listModel.swift */; };
 		EAF1F95120A5E95D003D60E6 /* FamSchedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1F95020A5E95D003D60E6 /* FamSchedViewController.swift */; };
+		EAF1F95420A5F20D003D60E6 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1F95220A5F20D003D60E6 /* ScheduleTableViewCell.swift */; };
+		EAF1F95520A5F20D003D60E6 /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF1F95320A5F20D003D60E6 /* ScheduleTableViewCell.xib */; };
+		EAF1F95720A60451003D60E6 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1F95620A60451003D60E6 /* PopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		EA28C21620A1F2AF00E20A9C /* RulesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesCell.xib; sourceTree = "<group>"; };
 		EA28C21920A215B000E20A9C /* listModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listModel.swift; sourceTree = "<group>"; };
 		EAF1F95020A5E95D003D60E6 /* FamSchedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamSchedViewController.swift; sourceTree = "<group>"; };
+		EAF1F95220A5F20D003D60E6 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		EAF1F95320A5F20D003D60E6 /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		EAF1F95620A60451003D60E6 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 			children = (
 				EA28C20020A1EB9800E20A9C /* RulesCheckViewController.swift */,
 				EAF1F95020A5E95D003D60E6 /* FamSchedViewController.swift */,
+				EAF1F95620A60451003D60E6 /* PopupViewController.swift */,
 				EA28C1FE20A1EB9800E20A9C /* AppDelegate.swift */,
 				EA28C21420A1F26F00E20A9C /* Custom Cell */,
 			);
@@ -136,6 +143,8 @@
 			children = (
 				EA28C21520A1F2AF00E20A9C /* RulesTableViewCell.swift */,
 				EA28C21620A1F2AF00E20A9C /* RulesCell.xib */,
+				EAF1F95220A5F20D003D60E6 /* ScheduleTableViewCell.swift */,
+				EAF1F95320A5F20D003D60E6 /* ScheduleTableViewCell.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -205,6 +214,7 @@
 				EA28C21820A1F2AF00E20A9C /* RulesCell.xib in Resources */,
 				EA28C20620A1EB9800E20A9C /* Assets.xcassets in Resources */,
 				EA28C20420A1EB9800E20A9C /* Main.storyboard in Resources */,
+				EAF1F95520A5F20D003D60E6 /* ScheduleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +268,11 @@
 			files = (
 				EA28C20120A1EB9800E20A9C /* RulesCheckViewController.swift in Sources */,
 				EA28C1FF20A1EB9800E20A9C /* AppDelegate.swift in Sources */,
+				EAF1F95420A5F20D003D60E6 /* ScheduleTableViewCell.swift in Sources */,
 				EA28C21720A1F2AF00E20A9C /* RulesTableViewCell.swift in Sources */,
 				EAF1F95120A5E95D003D60E6 /* FamSchedViewController.swift in Sources */,
 				EA28C21A20A215B000E20A9C /* listModel.swift in Sources */,
+				EAF1F95720A60451003D60E6 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
