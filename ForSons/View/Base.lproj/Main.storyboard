@@ -248,6 +248,12 @@
                         <viewLayoutGuide key="safeArea" id="4kF-kJ-nPx"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="eventTime" destination="p9G-S8-Gsq" id="hiX-iE-5ao"/>
+                        <outlet property="location" destination="aNw-jk-r76" id="8q8-0K-gmp"/>
+                        <outlet property="memberName" destination="zod-8E-njb" id="Rje-BG-ax1"/>
+                        <outlet property="newEvent" destination="plk-Tq-U01" id="I6E-LF-40s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtP-yN-FNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

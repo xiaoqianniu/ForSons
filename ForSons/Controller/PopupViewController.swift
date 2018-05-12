@@ -10,6 +10,13 @@ import UIKit
 
 class PopupViewController: UIViewController {
     
+    @IBOutlet weak var memberName: UITextField!
+    
+    @IBOutlet weak var newEvent: UITextField!
+    
+    @IBOutlet weak var eventTime: UITextField!
+    
+    @IBOutlet weak var location: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +55,7 @@ class PopupViewController: UIViewController {
     }
     
     @IBAction func addNewBtnPressed(_ sender: UIButton) {
+        
     }
 
 
