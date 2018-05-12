@@ -1,0 +1,6 @@
+framework module Pods_ForSons {
+  umbrella header "Pods-ForSons-umbrella.h"
+
+  export *
+  module * { export * }
+}
