@@ -31,10 +31,6 @@ class ScheduleTableViewCell: UITableViewCell{
         // Configure the view for the selected state
     }
     
-//    func popDataPasstoFam(memberValue: String, timeValue: String, eventValue: String, locationValue: String) {
-//        when.text = timeValue
-//        place.text = locationValue
-//        what.text = eventValue
-//    }
+
     
 }
