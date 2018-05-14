@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PopupViewController: UIViewController {
+class NewEventViewController: UIViewController {
+    
     
     @IBOutlet weak var memberName: UITextField!
     
@@ -18,10 +19,13 @@ class PopupViewController: UIViewController {
     
     @IBOutlet weak var location: UITextField!
     
+//    var delegate : PopupDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //         self.edgesForExtendedLayout = []
 //        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        navigationController?.setNavigationBarHidden(true, animated: true)
        
        self.showAnimate()
     }
@@ -55,7 +59,7 @@ class PopupViewController: UIViewController {
     }
     
     @IBAction func addNewBtnPressed(_ sender: UIButton) {
-        
+//        delegate?.popDataPasstoFam(memberValue: memberName.text!, timeValue: eventTime.text!, eventValue: newEvent.text!, locationValue: location.text!)
     }
 
 

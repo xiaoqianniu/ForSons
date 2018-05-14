@@ -36,15 +36,18 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
 //    show popupviewcontroller
     @IBAction func AddNewSchedule(_ sender: Any) {
-        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpID") as! PopupViewController
-        self.addChildViewController(popOverVC)
-        popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParentViewController: self)
+//        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpID") as! PopupViewController
+//        self.addChildViewController(popOverVC)
+//        popOverVC.view.frame = self.view.frame
+//        self.view.addSubview(popOverVC.view)
+//        popOverVC.delegate = self
+//        popOverVC.didMove(toParentViewController: self)
+//
+////     navigationController?.navigationBar.isTranslucent = false
+//
+//      self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-//     navigationController?.navigationBar.isTranslucent = false
-    
-      self.navigationController?.setNavigationBarHidden(true, animated: true)  
+    performSegue(withIdentifier: "goToNewEvent", sender: self)
         
     }
     
@@ -54,3 +57,13 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
 
 }
+//extension FamSchedViewController: PopupDelegate{
+//    func popDataPasstoFam(memberValue: String, timeValue: String, eventValue: String, locationValue: String) {
+//
+//    }
+
+    
+    
+    
+//}
+

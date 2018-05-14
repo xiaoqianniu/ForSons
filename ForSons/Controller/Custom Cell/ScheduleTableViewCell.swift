@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ScheduleTableViewCell: UITableViewCell {
+class ScheduleTableViewCell: UITableViewCell{
+  
+    
 
     @IBOutlet weak var familyImage: UIImageView!
     
     @IBOutlet weak var when: UILabel!
     
-    @IBOutlet weak var `where`: UILabel!
+    @IBOutlet weak var place: UILabel!
     
     @IBOutlet weak var what: UILabel!
     
@@ -28,5 +30,11 @@ class ScheduleTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+//    func popDataPasstoFam(memberValue: String, timeValue: String, eventValue: String, locationValue: String) {
+//        when.text = timeValue
+//        place.text = locationValue
+//        what.text = eventValue
+//    }
     
 }

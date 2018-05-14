@@ -120,6 +120,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bJW-7W-Adz">
                             <connections>
                                 <action selector="AddNewSchedule:" destination="7qk-AE-Rs7" id="d9e-x5-qoC"/>
+                                <segue destination="a4T-wM-pTn" kind="show" identifier="goToNewEvent" id="yad-d2-LbX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -132,12 +133,12 @@
             </objects>
             <point key="canvasLocation" x="1708" y="-335"/>
         </scene>
-        <!--Popup View Controller-->
+        <!--New Event View Controller-->
         <scene sceneID="Mjk-6b-JYa">
             <objects>
-                <viewController storyboardIdentifier="popUpID" id="a4T-wM-pTn" customClass="PopupViewController" customModule="ForSons" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="popUpID" id="a4T-wM-pTn" customClass="NewEventViewController" customModule="ForSons" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GIj-mO-DaK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="253-aM-adi">
@@ -179,7 +180,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avq-AX-CYM">
-                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                                <rect key="frame" x="0.0" y="63" width="375" height="491"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="who" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zod-8E-njb">
                                         <rect key="frame" x="0.0" y="18" width="375" height="45"/>

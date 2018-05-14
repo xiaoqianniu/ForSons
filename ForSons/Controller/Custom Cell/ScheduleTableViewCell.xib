@@ -75,9 +75,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="familyImage" destination="eHa-g1-jRh" id="SxT-Nx-coV"/>
+                <outlet property="place" destination="enP-Mc-JiH" id="BHn-nv-NuJ"/>
                 <outlet property="what" destination="17A-7y-VKZ" id="PB2-6B-N0w"/>
                 <outlet property="when" destination="8Xe-Sz-UeY" id="aYH-Zk-5Ec"/>
-                <outlet property="where" destination="enP-Mc-JiH" id="WDH-83-MsX"/>
             </connections>
             <point key="canvasLocation" x="36" y="114.5"/>
         </tableViewCell>

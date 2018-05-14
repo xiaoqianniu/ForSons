@@ -19,7 +19,8 @@
 		EAF1F95120A5E95D003D60E6 /* FamSchedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1F95020A5E95D003D60E6 /* FamSchedViewController.swift */; };
 		EAF1F95420A5F20D003D60E6 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1F95220A5F20D003D60E6 /* ScheduleTableViewCell.swift */; };
 		EAF1F95520A5F20D003D60E6 /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF1F95320A5F20D003D60E6 /* ScheduleTableViewCell.xib */; };
-		EAF1F95720A60451003D60E6 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1F95620A60451003D60E6 /* PopupViewController.swift */; };
+		EAF1F95720A60451003D60E6 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1F95620A60451003D60E6 /* NewEventViewController.swift */; };
+		EAF1F95920A78CD8003D60E6 /* popUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1F95820A78CD8003D60E6 /* popUpDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,8 @@
 		EAF1F95020A5E95D003D60E6 /* FamSchedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamSchedViewController.swift; sourceTree = "<group>"; };
 		EAF1F95220A5F20D003D60E6 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		EAF1F95320A5F20D003D60E6 /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
-		EAF1F95620A60451003D60E6 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		EAF1F95620A60451003D60E6 /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
+		EAF1F95820A78CD8003D60E6 /* popUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +124,9 @@
 			children = (
 				EA28C20020A1EB9800E20A9C /* RulesCheckViewController.swift */,
 				EAF1F95020A5E95D003D60E6 /* FamSchedViewController.swift */,
-				EAF1F95620A60451003D60E6 /* PopupViewController.swift */,
+				EAF1F95620A60451003D60E6 /* NewEventViewController.swift */,
 				EA28C1FE20A1EB9800E20A9C /* AppDelegate.swift */,
+				EAF1F95820A78CD8003D60E6 /* popUpDelegate.swift */,
 				EA28C21420A1F26F00E20A9C /* Custom Cell */,
 			);
 			path = Controller;
@@ -271,8 +274,9 @@
 				EAF1F95420A5F20D003D60E6 /* ScheduleTableViewCell.swift in Sources */,
 				EA28C21720A1F2AF00E20A9C /* RulesTableViewCell.swift in Sources */,
 				EAF1F95120A5E95D003D60E6 /* FamSchedViewController.swift in Sources */,
+				EAF1F95920A78CD8003D60E6 /* popUpDelegate.swift in Sources */,
 				EA28C21A20A215B000E20A9C /* listModel.swift in Sources */,
-				EAF1F95720A60451003D60E6 /* PopupViewController.swift in Sources */,
+				EAF1F95720A60451003D60E6 /* NewEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
