@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="619" y="-390"/>
+            <point key="canvasLocation" x="772" y="-323"/>
         </scene>
         <!--Family-->
         <scene sceneID="lnH-x2-lza">
@@ -123,8 +123,8 @@
                     <navigationItem key="navigationItem" title="Family" id="X7u-uw-jx0">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bJW-7W-Adz">
                             <connections>
-                                <action selector="AddNewSchedule:" destination="7qk-AE-Rs7" id="d9e-x5-qoC"/>
-                                <segue destination="a4T-wM-pTn" kind="show" identifier="goToNewEvent" id="ngo-hF-lG7"/>
+                                <action selector="AddNewSchedule:" destination="7qk-AE-Rs7" id="tzB-r9-xkE"/>
+                                <segue destination="a4T-wM-pTn" kind="show" identifier="goToNewEvent" id="zLS-xu-oDZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJO-0t-oKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410" y="-303"/>
+            <point key="canvasLocation" x="1641" y="-374"/>
         </scene>
         <!--New Event View Controller-->
         <scene sceneID="Mjk-6b-JYa">
@@ -262,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtP-yN-FNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="-323"/>
+            <point key="canvasLocation" x="2446" y="-383"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aA4-8Y-44Q">
@@ -276,7 +276,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="4KE-HK-pgd" kind="relationship" relationship="viewControllers" id="5Vd-6I-rnd"/>
-                        <segue destination="XzP-Ae-rjz" kind="relationship" relationship="viewControllers" id="D7D-H9-jOi"/>
+                        <segue destination="jVR-LC-lhI" kind="relationship" relationship="viewControllers" id="99H-bc-JVK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUz-c6-1pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -301,30 +301,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Kk-Ho-mrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="-185"/>
+            <point key="canvasLocation" x="-49" y="149"/>
         </scene>
-        <!--FamSched-->
-        <scene sceneID="u4c-wJ-cYR">
+        <!--Item-->
+        <scene sceneID="Ja8-Ak-Sjl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XzP-Ae-rjz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FamSched" image="calendar (1)" id="L07-Vq-fFT"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jVR-LC-lhI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="JGx-RP-nSO"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sNO-uP-wvQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XX3-q5-8dN">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7qk-AE-Rs7" kind="relationship" relationship="rootViewController" id="SwB-VE-pfG"/>
+                        <segue destination="7qk-AE-Rs7" kind="relationship" relationship="rootViewController" id="W7N-d5-Npg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A0Z-VW-oZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94C-od-sWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="712" y="-214"/>
+            <point key="canvasLocation" x="1039" y="-289"/>
         </scene>
     </scenes>
     <resources>
-        <image name="calendar (1)" width="12" height="12"/>
         <image name="list" width="12" height="12"/>
     </resources>
 </document>
