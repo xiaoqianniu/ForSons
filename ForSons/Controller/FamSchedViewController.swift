@@ -23,23 +23,29 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
+       tableView.delegate = self
         tableView.dataSource = self
         let nibName = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "ScheduleCell")
+         schedules.eventName = "m"
+        schedules.eventWhat = "read"
+        schedules.eventPlace = "home"
+        schedules.eventWhen = "7"
+        scheduleArray.append(schedules)
         tableView.reloadData()
         
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell", for: indexPath) as! ScheduleTableViewCell
-       scheduleArray.append(schedules)
-        
-          cell.when.text = scheduleArray[indexPath.row].eventWhen
+//       scheduleArray.append(schedules)
+       
+          cell.when?.text = scheduleArray[indexPath.row].eventWhen
         print(scheduleArray[indexPath.row].eventWhen)
-          cell.what.text = scheduleArray[indexPath.row].eventWhat
-          cell.place.text = scheduleArray[indexPath.row].eventPlace
-        
+          cell.what?.text = scheduleArray[indexPath.row].eventWhat
+          cell.place?.text = scheduleArray[indexPath.row].eventPlace
+       
         return cell
     }
     
@@ -67,7 +73,7 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToNewEvent"{
         let destinationVC = segue.destination as! NewEventViewController
-        destinationVC.delegate = self
+        destinationVC.Newdelegate = self
         }
     }
     
@@ -79,6 +85,8 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         schedules.eventWhen = timeValue
         schedules.eventPlace = locationValue
         schedules.eventWhat = eventValue
+        scheduleArray.append(schedules)
+        tableView.reloadData()
     }
     
 

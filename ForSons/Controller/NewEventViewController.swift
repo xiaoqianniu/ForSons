@@ -23,7 +23,7 @@ class NewEventViewController: UIViewController {
     
     @IBOutlet weak var location: UITextField!
     
-    var delegate :NewEventDelegate?
+    var Newdelegate :NewEventDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,16 +66,17 @@ class NewEventViewController: UIViewController {
 //    }
     
     @IBAction func addNewBtnPressed(_ sender: UIButton) {
-        if delegate != nil{
+        
         let name = memberName.text!
         let time = eventTime.text!
         let newThing = newEvent.text!
         let place = location.text!
-        delegate?.popDataPasstoFam(memberValue: name, timeValue: time, eventValue: newThing, locationValue: place)
+        Newdelegate?.popDataPasstoFam(memberValue: name, timeValue: time, eventValue: newThing, locationValue: place)
         
-       dismiss(animated: true, completion: nil)
+      present(FamSchedViewController(), animated: true, completion: nil)
         
-    }
+        
+    
 
     }
 

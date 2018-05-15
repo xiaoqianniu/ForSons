@@ -99,6 +99,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NuU-Be-f9x">
                                 <rect key="frame" x="0.0" y="160" width="375" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7qk-AE-Rs7" id="LUM-co-Adu"/>
+                                    <outlet property="delegate" destination="7qk-AE-Rs7" id="Da2-N4-EIR"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,12 +130,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="7mj-LF-kLi" id="zWI-CF-edM"/>
-                        <outlet property="tableView" destination="NuU-Be-f9x" id="7OW-9K-yxD"/>
+                        <outlet property="tableView" destination="NuU-Be-f9x" id="LBd-YS-BNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJO-0t-oKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234" y="-302"/>
+            <point key="canvasLocation" x="1410" y="-303"/>
         </scene>
         <!--New Event View Controller-->
         <scene sceneID="Mjk-6b-JYa">
