@@ -50,6 +50,31 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 108.0
     }
+    //    TODO: Swipe to delete cell
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
+            self.updateModel(at: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            completion(true)
+        }
+        deleteAction.backgroundColor = .red
+        deleteAction.image = UIImage(named:"delete")
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
+    }
+    //    TODO: Delete realm data
+    func updateModel(at indexPath:IndexPath){
+        if let schedule = scheduleArray?[indexPath.row]{
+            do
+            {
+               try realm.write {
+                realm.delete(schedule)
+            }
+            }catch{
+                print(error)
+            }
+        }
+    }
     
     //    MARK:--segue methods
     
