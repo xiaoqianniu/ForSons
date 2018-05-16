@@ -15,9 +15,7 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    var scheduleArray = [Schedule]()
-    
- //   var schedule = Schedule()
+    var scheduleArray : Results<Schedule>?
     
     let realm = try! Realm()
     
@@ -29,7 +27,7 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         tableView.dataSource = self
         let nibName = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "ScheduleCell")
-        tableView.reloadData()
+        loadData()
         
     }
 
@@ -37,17 +35,16 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell", for: indexPath) as! ScheduleTableViewCell
 
-        print(scheduleArray)
-          cell.when?.text = scheduleArray[indexPath.row].eventWhen
-        print(scheduleArray[indexPath.row].eventWhen)
-          cell.what?.text = scheduleArray[indexPath.row].eventWhat
-          cell.place?.text = scheduleArray[indexPath.row].eventPlace
-//        saveData(schedule: schedules)
+        
+        cell.when?.text = scheduleArray?[indexPath.row].eventWhen ?? "No time"
+          cell.what?.text = scheduleArray?[indexPath.row].eventWhat ?? "No Event"
+          cell.place?.text = scheduleArray?[indexPath.row].eventPlace ?? "No Location"
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scheduleArray.count
+        return scheduleArray?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -76,7 +73,7 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         schedules.eventWhen = timeValue
         schedules.eventPlace = locationValue
         schedules.eventWhat = eventValue
-         scheduleArray.append(schedules)
+         saveData(schedule: schedules)
         tableView.reloadData()
        
        
@@ -93,7 +90,10 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }
         tableView.reloadData()
     }
-    
+    func loadData(){
+        scheduleArray = realm.objects(Schedule.self)
+        tableView.reloadData()
+    }
 
     @IBAction func segmentControlTapped(_ sender: UISegmentedControl) {
     }
