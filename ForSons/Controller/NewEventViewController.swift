@@ -12,7 +12,7 @@ protocol NewEventDelegate {
     func popDataPasstoFam(memberValue:String,timeValue:String,eventValue:String,locationValue:String)
 }
 
-class NewEventViewController: UIViewController {
+class NewEventViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
     
     @IBOutlet weak var memberName: UITextField!
@@ -26,10 +26,16 @@ class NewEventViewController: UIViewController {
     var Newdelegate :NewEventDelegate?
     
     let picker = UIDatePicker()
+    let namePicker = UIPickerView()
+    let names = ["muge","muyang","muqi","mommy","daddy"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//         self.edgesForExtendedLayout = []
+        namePicker.delegate = self
+        namePicker.dataSource = self
+        memberName.inputView = namePicker
+        memberName.textAlignment = .natural
+        memberName.placeholder = "Select Name"
 
      navigationController?.setNavigationBarHidden(true, animated: true)
      createDatePicker()
@@ -81,5 +87,20 @@ class NewEventViewController: UIViewController {
         self.view.endEditing(true)
         
     }
+    //    MARK: Implement pickerview methods
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return names.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return names[row]
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        memberName.text = names[row]
+        memberName.resignFirstResponder()
+    }
+    
 
 }
