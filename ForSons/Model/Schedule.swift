@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Schedule{
+class Schedule : Object {
     
-    var eventWhen = ""
-    var eventPlace = ""
-    var eventName = ""
-    var eventWhat = ""
+    @objc dynamic var eventWhen = ""
+    @objc dynamic var eventPlace = ""
+    @objc dynamic var eventName = ""
+    @objc dynamic var eventWhat = ""
     
 
 }

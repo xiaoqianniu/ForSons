@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,NewEventDelegate {
     
@@ -16,15 +17,15 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     var scheduleArray = [Schedule]()
     
-    var schedules = Schedule()
+ //   var schedule = Schedule()
     
-    
+    let realm = try! Realm()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       tableView.delegate = self
+        tableView.delegate = self
         tableView.dataSource = self
         let nibName = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "ScheduleCell")
@@ -36,11 +37,12 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell", for: indexPath) as! ScheduleTableViewCell
 
+        print(scheduleArray)
           cell.when?.text = scheduleArray[indexPath.row].eventWhen
         print(scheduleArray[indexPath.row].eventWhen)
           cell.what?.text = scheduleArray[indexPath.row].eventWhat
           cell.place?.text = scheduleArray[indexPath.row].eventPlace
-       
+//        saveData(schedule: schedules)
         return cell
     }
     
@@ -67,15 +69,28 @@ class FamSchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func popDataPasstoFam(memberValue: String, timeValue: String, eventValue: String, locationValue: String) {
-     
         
+        let schedules = Schedule();
         schedules.eventName = memberValue
         print(schedules.eventName)
         schedules.eventWhen = timeValue
         schedules.eventPlace = locationValue
         schedules.eventWhat = eventValue
-        scheduleArray.append(schedules)
-        print(scheduleArray.count)
+         scheduleArray.append(schedules)
+        tableView.reloadData()
+       
+       
+    }
+    
+    func saveData(schedule:Schedule){
+        do
+        {
+           try realm.write {
+            realm.add(schedule)
+        }
+        }catch{
+            print(error)
+        }
         tableView.reloadData()
     }
     
