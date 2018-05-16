@@ -25,15 +25,17 @@ class NewEventViewController: UIViewController {
     
     var Newdelegate :NewEventDelegate?
     
+    let picker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //         self.edgesForExtendedLayout = []
 
      navigationController?.setNavigationBarHidden(true, animated: true)
-
+     createDatePicker()
     }
    
-    
+    //    TODO: Cancel Button
     
     @IBAction func cancelBtn(_ sender: UIButton) {
    
@@ -41,7 +43,7 @@ class NewEventViewController: UIViewController {
     navigationController?.setNavigationBarHidden(false, animated: true)
     
     }
-    
+    //    TODO: - Add New Event
     @IBAction func addNewBtnPressed(_ sender: UIButton) {
         
         let name = memberName.text!
@@ -54,8 +56,30 @@ class NewEventViewController: UIViewController {
      navigationController?.setNavigationBarHidden(false, animated: true)
 
     }
-
-  
-
+    // MARK: Implement datePicker method
+    func createDatePicker(){
+        
+        // create toolBar
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+       // done button for toolBar
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneBtnPressed))
+        toolBar.setItems([done], animated: false)
+        eventTime.inputView = picker
+        eventTime.inputAccessoryView = toolBar
+        
+     //  formate picker for date
+        picker.datePickerMode = .dateAndTime
+    }
+    @objc func doneBtnPressed(){
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        let date = formatter.string(from: picker.date)
+        eventTime.text = "\(date)"
+        self.view.endEditing(true)
+        
+    }
 
 }
