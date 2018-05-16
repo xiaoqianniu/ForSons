@@ -23,19 +23,34 @@ class NewEventViewController: UIViewController,UIPickerViewDelegate,UIPickerView
     
     @IBOutlet weak var location: UITextField!
     
+    @IBOutlet weak var addBtn: UIButton!
+    
+    @IBOutlet weak var cancelBtn: UIButton!
     var Newdelegate :NewEventDelegate?
     
     let picker = UIDatePicker()
     let namePicker = UIPickerView()
+    let placePicker = UIPickerView()
     let names = ["muge","muyang","muqi","mommy","daddy"]
+    let locations = ["Hymus dentist clinic","PC primary school","Daycare school","PC CLSC","Lakeshore hospital","175 Stillview","pediatrician clinic","Other place..."]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        namePicker.tag = 1
+        placePicker.tag = 2
+        
         namePicker.delegate = self
         namePicker.dataSource = self
+        placePicker.delegate = self
+        placePicker.dataSource = self
         memberName.inputView = namePicker
-        memberName.textAlignment = .natural
+        memberName.textAlignment = .center
         memberName.placeholder = "Select Name"
+        location.inputView = placePicker
+        location.placeholder = "Select Location"
+        location.textAlignment = .center
+        newEvent.placeholder = "Add New Event"
+        newEvent.textAlignment = .center
 
      navigationController?.setNavigationBarHidden(true, animated: true)
      createDatePicker()
@@ -74,6 +89,8 @@ class NewEventViewController: UIViewController,UIPickerViewDelegate,UIPickerView
         toolBar.setItems([done], animated: false)
         eventTime.inputView = picker
         eventTime.inputAccessoryView = toolBar
+        eventTime.placeholder = "Select Time"
+        eventTime.textAlignment = .center
         
      //  formate picker for date
         picker.datePickerMode = .dateAndTime
@@ -89,17 +106,31 @@ class NewEventViewController: UIViewController,UIPickerViewDelegate,UIPickerView
     }
     //    MARK: Implement pickerview methods
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return names.count
+        if pickerView.tag == 1{
+              return names.count
+        }else{
+            return locations.count
+        }
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return names[row]
+        if pickerView.tag == 1{
+            return names[row]
+        }else{
+            return locations[row]
+        }
+        
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 1{
         memberName.text = names[row]
         memberName.resignFirstResponder()
+        }else{
+            location.text = locations[row]
+            location.resignFirstResponder()
+        }
     }
     
 
